@@ -20,7 +20,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	vbox "github.com/terra-farm/go-virtualbox"
+	vbox "github.com/andreaf74/go-virtualbox"
 )
 
 var (

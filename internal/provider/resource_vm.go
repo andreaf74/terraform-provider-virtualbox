@@ -544,7 +544,7 @@ func tfToVbox(ctx context.Context, d *schema.ResourceData, vm *vbox.Machine) err
 	vm.VRAM = 20 // Always 10MiB for vram
 	vm.Flag = vbox.ACPI | vbox.IOAPIC | vbox.RTCUSEUTC | vbox.PAE |
 		vbox.HWVIRTEX | vbox.NESTEDPAGING | vbox.LARGEPAGES | vbox.LONGMODE |
-		vbox.VTXVPID | vbox.VTXUX
+		vbox.VTXVPID | vbox.VTXUX | vbox.NSTHWVRT
 	vm.NICs, err = netTfToVbox(ctx, d)
 	vm.BootOrder = defaultBootOrder
 	for i, bootDev := range d.Get("boot_order").([]any) {
